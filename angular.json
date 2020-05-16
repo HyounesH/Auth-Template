@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "authentication-client"
+    }
+  },
+  "defaultProject": "authentication-client",
+  "cli": {
+    "analytics": false
+  }
 }
