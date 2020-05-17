@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CustomMaterialModule} from './angular-meterial.module';
-import {AuthenticationModule} from './authentication/authentication.module';
+import { CustomMaterialModule } from './utils/CustomMaterial.Module';
+import { CommonModule } from '@angular/common';
+import { AuthenticationModule } from './authentication/authentication.module';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import {AuthenticationModule} from './authentication/authentication.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CustomMaterialModule
+    CommonModule,
+    CustomMaterialModule,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,23 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LogInComponent } from './log-in/log-in.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { CustomMaterialModule } from '../utils/CustomMaterial.Module';
 
 
 @NgModule({
   declarations: [LogInComponent],
   imports: [
     CommonModule,
-    FormsModule,
+    
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    CustomMaterialModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
+  exports : [
+    CustomMaterialModule
+  ]
+      
+    })
 export class AuthenticationModule { }
